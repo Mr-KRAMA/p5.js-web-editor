@@ -38,14 +38,12 @@ const Nav = ({ layout }) => {
   return isMobile ? (
     <MobileNav />
   ) : (
-    <>
-      <header className="nav__header">
-        <Menubar>
-          <LeftLayout layout={layout} />
-          <UserMenu />
-        </Menubar>
-      </header>
-    </>
+    <header className="nav__header">
+      <Menubar>
+        <LeftLayout layout={layout} />
+        <UserMenu />
+      </Menubar>
+    </header>
   );
 };
 
