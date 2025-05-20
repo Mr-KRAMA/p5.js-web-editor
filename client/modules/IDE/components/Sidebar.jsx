@@ -76,6 +76,7 @@ export default function SideBar() {
     <FileDrawer>
       {ide.sidebarIsExpanded && (
         <button
+          aria-label="Close sidebar"
           data-backdrop="filedrawer"
           onClick={() => {
             dispatch(collapseSidebar());

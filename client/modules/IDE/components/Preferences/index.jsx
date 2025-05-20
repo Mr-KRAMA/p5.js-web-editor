@@ -22,6 +22,7 @@ import {
   setPreferencesTab
 } from '../../actions/preferences';
 import { p5SoundURL, p5URL, useP5Version } from '../../hooks/useP5Version';
+// eslint-disable-next-line import/no-cycle
 import VersionPicker from '../VersionPicker';
 import { updateFileContent } from '../../actions/files';
 import { CmControllerContext } from '../../pages/IDEView';
@@ -115,6 +116,7 @@ export default function Preferences() {
   };
 
   const markdownComponents = useMemo(() => {
+    // eslint-disable-next-line react/no-unstable-nested-components
     const ExternalLink = ({ children, ...props }) => (
       <a {...props} target="_blank">
         {children}
@@ -127,6 +129,7 @@ export default function Preferences() {
       children: undefined
     };
 
+    // eslint-disable-next-line react/no-unstable-nested-components
     const Paragraph = ({ children, ...props }) => (
       <p className="preference__paragraph" {...props}>
         {children}

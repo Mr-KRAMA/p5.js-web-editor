@@ -18,6 +18,7 @@ import {
 } from '../actions/project';
 import { getIsUserOwner } from '../selectors/users';
 import RootPage from '../../../components/RootPage';
+// eslint-disable-next-line import/no-cycle
 import Header from '../components/Header';
 import FloatingActionButton from '../components/FloatingActionButton';
 import Editor from '../components/Editor';
@@ -25,6 +26,7 @@ import {
   EditorSidebarWrapper,
   PreviewWrapper
 } from '../components/Editor/MobileEditor';
+// eslint-disable-next-line import/no-cycle
 import IDEOverlays from '../components/IDEOverlays';
 import useIsMobile from '../hooks/useIsMobile';
 import { P5VersionProvider } from '../hooks/useP5Version';

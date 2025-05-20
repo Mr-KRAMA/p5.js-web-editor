@@ -27,6 +27,7 @@ import {
   stopSketch
 } from '../../actions/ide';
 import { logoutUser } from '../../../User/actions';
+// eslint-disable-next-line import/no-cycle
 import { CmControllerContext } from '../../pages/IDEView';
 import MobileNav from './MobileNav';
 import useIsMobile from '../../hooks/useIsMobile';
@@ -37,14 +38,12 @@ const Nav = ({ layout }) => {
   return isMobile ? (
     <MobileNav />
   ) : (
-    <>
-      <header className="nav__header">
-        <Menubar>
-          <LeftLayout layout={layout} />
-          <UserMenu />
-        </Menubar>
-      </header>
-    </>
+    <header className="nav__header">
+      <Menubar>
+        <LeftLayout layout={layout} />
+        <UserMenu />
+      </Menubar>
+    </header>
   );
 };
 

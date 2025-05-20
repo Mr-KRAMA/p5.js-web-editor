@@ -130,7 +130,7 @@ const Collection = ({ collectionId, username }) => {
                       t('Collection.HeaderCreatedAt')
                     )}
                     {renderFieldHeader('user', t('Collection.HeaderUser'))}
-                    <th scope="col"></th>
+                    <th aria-label="dropdown" scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>
