@@ -165,6 +165,7 @@ userSchema.pre('save', function checkApiKey(next) {
   }
 });
 
+
 userSchema.virtual('id').get(function idToString() {
   return this._id.toHexString();
 });
